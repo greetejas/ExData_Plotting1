@@ -30,4 +30,5 @@ plot(x=seq_along(input$Weekday), y=input$Sub_metering_1, type="l", ylab = "Energ
 lines(x=seq_along(input$Weekday), y=input$Sub_metering_2, col="red", xaxt="n")
 lines(x=seq_along(input$Weekday), y=input$Sub_metering_3, col="blue", xaxt="n")
 axis(1, at=c(0, (nrow(input)/2), nrow(input)), labels=levels(input$Weekday)[5:7])
+legend("topright", legend =c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("black", "red", "blue"), lty= 1, lwd=2)
 dev.off()
